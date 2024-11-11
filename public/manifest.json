@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Extension con VITE",
+    "description": "Una extensión de ejemplo con Vite y TypeScript",
+    "version": "1.0",
+    "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+    "action": {
+      "default_popup": "index.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.plazavea.com.pe/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "permissions": [
+      "activeTab", "alarms", "storage", "scripting"
+    ]
+  }
+  
